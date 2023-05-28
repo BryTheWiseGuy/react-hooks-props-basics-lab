@@ -5,7 +5,7 @@ import user from "../data/user.js";
 function About(props) {
   function testBio() {
     if (props.bio) {
-      return <p>{user.bio}</p>;
+      return <p>{props.bio}</p>;
     } else {
       return null;
     }
