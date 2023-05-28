@@ -4,11 +4,11 @@ import user from "../data/user.js";
 
 function About(props) {
   function testBio() {
-    if (user.bio === true) {
+    if (user.bio) {
       return <p>{props.bio}</p>;
     } else if (user.bio === "") {
       return null;
-    } else if (user.bio === false) {
+    } else if (!user.bio) {
       return null;
     }
   }
