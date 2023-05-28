@@ -3,10 +3,20 @@ import Links from "./Links";
 import user from "../data/user.js";
 
 function About(props) {
+  function testBio() {
+    if (user.bio === true) {
+      return <p>{props.bio}</p>;
+    } else if (user.bio === "") {
+      return null;
+    } else if (user.bio === false) {
+      return null;
+    }
+  }
+
   return (
     <div id="about">
       <h2>About Me</h2>
-      { "" ? null : <p>{props.bio}</p> }
+      { testBio() }
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       <Links github={user.links.github} linkedin={user.links.linkedin}/>
     </div>
