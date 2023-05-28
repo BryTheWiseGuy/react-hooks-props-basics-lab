@@ -6,9 +6,9 @@ function About(props) {
   function testBio() {
     if (user.bio) {
       return <p>{props.bio}</p>;
-    } else if (user.bio === "") {
-      return null;
     } else if (!user.bio) {
+      return null;
+    } else {
       return null;
     }
   }
